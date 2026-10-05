@@ -56,10 +56,15 @@
     .hero{min-height:100svh;background:var(--night);color:#fff;position:relative;overflow:hidden}
     .hero:before{content:"";position:absolute;inset:0 45% 0 0;background:radial-gradient(circle at 28% 34%,rgba(81,101,116,.18),transparent 43%)}
     .hero-grid{min-height:100svh;display:grid;grid-template-columns:1.02fr .98fr}
-    .hero-copy{position:relative;z-index:3;align-self:center;padding:8.5rem 1rem 7rem 0;max-width:760px}
+    .hero-copy{position:relative;z-index:3;align-self:center;padding:7rem 1rem 4.5rem 0;max-width:760px}
+    .hero h1{font-size:clamp(3.15rem,min(6.3vw,10.6svh),6.5rem)}
     .hero h1 span{display:block}.hero h1 .italic{color:#c7cfd4}
     .hero .sub{max-width:38rem;color:rgba(255,255,255,.73);font-size:clamp(.98rem,1.25vw,1.15rem);margin-bottom:0}
-    .hero-actions{margin-top:1.9rem}.hero .micro{margin:.8rem 0 0;color:var(--silver);font-size:.73rem;letter-spacing:.06em}
+    .hero-actions{margin-top:1rem}.hero .micro{margin:.8rem 0 0;color:var(--silver);font-size:.73rem;letter-spacing:.06em}
+    .hero-copy>.hero-pricing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));max-width:440px;margin:1.35rem 0 0;padding:1rem 1.25rem;background:var(--slate);border:1px solid rgba(203,211,216,.35);opacity:1;transform:none;animation:none}
+    .hero-pricing>div{min-width:0}.hero-pricing>div+div{border-left:1px solid rgba(203,211,216,.25);padding-left:1.25rem}
+    .hero-pricing dt{font:600 .68rem/1.4 var(--ui);letter-spacing:.12em;text-transform:uppercase;color:var(--silver)}
+    .hero-pricing dd{margin:.3rem 0 0;font:600 1.8rem/1.2 var(--ui);color:#fff;white-space:nowrap}.hero-pricing dd span{font-size:.85rem;font-weight:500;letter-spacing:.03em}
     .hero-portrait{position:relative;overflow:hidden;clip-path:polygon(10% 0,100% 0,100% 100%,0 100%,0 12%)}
     .hero-portrait:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--night),transparent 24%),linear-gradient(0deg,rgba(13,18,23,.42),transparent 48%)}
     .hero-portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 16%;filter:saturate(.96) contrast(1.01)}
@@ -105,7 +110,7 @@
     @keyframes rise{to{opacity:1;transform:none}}@keyframes maskIn{from{clip-path:polygon(100% 0,100% 0,100% 100%,100% 100%,100% 0)}}
 
     @media(max-width:1000px){
-      .hero-grid{grid-template-columns:1.05fr .95fr}.hero-copy{padding:8rem 1rem 6rem 0}.hero-mark{left:auto;right:-16%;width:74vw}
+      .hero-grid{grid-template-columns:1.05fr .95fr}.hero-copy{padding:7rem 1rem 4.5rem 0}.hero-mark{left:auto;right:-16%;width:74vw}
       .team-intro,.services-head,.works-grid{grid-template-columns:1fr}.service{grid-template-columns:2.5rem minmax(0,1fr) auto;gap:1rem 1.5rem}.service-num{grid-column:1;grid-row:1/3}.service h3{grid-column:2;grid-row:1}.service p{grid-column:2;grid-row:2}.service .btn{grid-column:3;grid-row:1/3}.person-kamilla,.person-aisha{grid-column:1/span 6}.person-liza,.person-bella{grid-column:7/span 6;margin-top:0}.person .photo{aspect-ratio:4/5}.person .btn{width:100%;padding-inline:.8rem}
       .person .btn{min-height:72px}.footer-top{flex-wrap:wrap}.footer-top .identity{flex-basis:100%}.footer-note{flex:1;margin:0}.footer-meta{flex:0 0 auto}
     }
@@ -120,7 +125,9 @@
     @media(max-width:767px){
       .hero{min-height:auto}
       .hero-grid{min-height:auto;display:block}
-      .hero-copy{padding-top:7.8rem;padding-bottom:2.5rem}
+      .hero-copy{padding-top:6rem;padding-right:0;padding-bottom:2rem}
+      .hero h1{font-size:clamp(2.4rem,11.5vw,3.1rem);margin-bottom:1rem}
+      .hero-copy>.hero-pricing{max-width:none;padding:.85rem 1rem;margin-top:1rem}.hero-pricing>div+div{padding-left:1rem}
       .hero-portrait,.hero-mark{display:none}
       .hero-facts{position:static;padding-bottom:1.35rem;display:grid;grid-template-columns:1fr 1fr;gap:.35rem 1rem}
     }
@@ -148,6 +155,10 @@
           <p class="eyebrow">Russian massage · Dubai · Available 24/7</p>
           <h1><span>Dubai Outcall</span> <span class="italic">Massage Services</span></h1>
           <p class="sub">Professional Russian massage in your Dubai hotel suite or room, provided by Russian female massage therapists.</p>
+          <dl class="hero-pricing" aria-label="Massage prices">
+            <div><dt>1 hour</dt><dd><span>AED</span> 700</dd></div>
+            <div><dt>90 minutes</dt><dd><span>AED</span> 900</dd></div>
+          </dl>
           <div class="hero-actions"><a class="btn wa" href="https://wa.me/971502943466?text=Hello%20Lotus%20Dubai%20Outcall%2C%20I%20would%20like%20to%20book%20an%20outcall%20massage%20at%20my%20hotel%20in%20Dubai.%20Please%20share%20the%20available%20therapists%20and%20appointment%20times." data-message="Hello Lotus Dubai Outcall, I would like to book an outcall massage at my hotel in Dubai. Please share the available therapists and appointment times." data-cta-location="hero" data-cta-type="general-booking" target="_blank" rel="noopener noreferrer" aria-label="Book Lotus Dubai Outcall Dubai outcall massage on WhatsApp"><span class="btn-label">Book on WhatsApp</span> <span class="arr">↗</span></a></div>
           <p class="micro">Hotels across Dubai · Available 24/7, subject to confirmation</p>
         </div>
