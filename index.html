@@ -81,6 +81,11 @@
 
     .services{padding:clamp(5.5rem,9vw,8rem) 0;background:var(--pearl)}
     .services-head{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:end;margin-bottom:3.2rem}.services-head p:last-child{max-width:31rem;color:var(--muted)}
+    .massage-pricing{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2rem;margin:0 0 2rem;padding:1.5rem 0;border-top:1px solid #c8cdd0}
+    .massage-pricing>div{min-width:0;display:flex;align-items:baseline;justify-content:space-between;gap:1rem}
+    .massage-pricing>div+div{border-left:1px solid #c8cdd0;padding-left:2rem}
+    .massage-pricing dt{font-size:1rem;color:var(--muted)}.massage-pricing dd{margin:0;white-space:nowrap;font:600 1.35rem/1.4 var(--ui);color:var(--night)}
+    @media(max-width:700px){.massage-pricing{gap:1rem}.massage-pricing>div{flex-direction:column;gap:.5rem}.massage-pricing>div+div{padding-left:1rem}.massage-pricing dt{font-size:.88rem}.massage-pricing dd{font-size:1.2rem}}
     .service-list{border-top:1px solid #c8cdd0}.service{display:grid;grid-template-columns:4rem 1fr 1.15fr auto;gap:clamp(1rem,3vw,3rem);align-items:center;padding:1.55rem 0;border-bottom:1px solid #c8cdd0}
     .service-num{font:italic 1.45rem/1 var(--serif);color:var(--muted)}.service h3{font-size:clamp(1.55rem,2.3vw,2.5rem);margin:0}.service p{margin:0;color:var(--muted);max-width:30rem}
 
@@ -167,6 +172,10 @@
     <section class="services" id="services">
       <div class="wrap">
         <div class="services-head reveal"><div><p class="eyebrow">Massage menu</p><h2>Four ways to <span class="italic" style="color:var(--muted)">unwind.</span></h2></div><p>Professional outcall treatments delivered to your Dubai hotel accommodation.</p></div>
+        <dl class="massage-pricing reveal" aria-label="Massage pricing">
+          <div><dt>1 hour · 60 minutes</dt><dd>AED 700</dd></div>
+          <div><dt>90 minutes</dt><dd>AED 900</dd></div>
+        </dl>
         <div class="service-list reveal">
           <article class="service"><span class="service-num">01</span><h3>Swedish Massage</h3><p>Smooth, flowing techniques created for complete relaxation.</p><a class="btn wa" href="https://wa.me/971502943466?text=Hello%20Lotus%20Dubai%20Outcall%2C%20I%20would%20like%20to%20book%20Swedish%20Massage%20at%20my%20hotel%20in%20Dubai.%20Please%20share%20the%20available%20therapists%20and%20appointment%20times." data-message="Hello Lotus Dubai Outcall, I would like to book Swedish Massage at my hotel in Dubai. Please share the available therapists and appointment times." data-cta-location="services" data-cta-type="service-booking" data-service="swedish-massage" target="_blank" rel="noopener noreferrer" aria-label="Book Swedish Massage on WhatsApp"><span class="btn-label">Book on WhatsApp</span> <span class="arr">↗</span></a></article>
           <article class="service"><span class="service-num">02</span><h3>Aroma Massage</h3><p>A calming massage experience complemented by aromatic oils.</p><a class="btn wa" href="https://wa.me/971502943466?text=Hello%20Lotus%20Dubai%20Outcall%2C%20I%20would%20like%20to%20book%20Aroma%20Massage%20at%20my%20hotel%20in%20Dubai.%20Please%20share%20the%20available%20therapists%20and%20appointment%20times." data-message="Hello Lotus Dubai Outcall, I would like to book Aroma Massage at my hotel in Dubai. Please share the available therapists and appointment times." data-cta-location="services" data-cta-type="service-booking" data-service="aroma-massage" target="_blank" rel="noopener noreferrer" aria-label="Book Aroma Massage on WhatsApp"><span class="btn-label">Book on WhatsApp</span> <span class="arr">↗</span></a></article>
