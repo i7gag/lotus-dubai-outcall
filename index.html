@@ -124,12 +124,20 @@
     }
     @media(max-width:767px){
       .hero{min-height:auto}
-      .hero-grid{min-height:auto;display:block}
-      .hero-copy{padding-top:6rem;padding-right:0;padding-bottom:2rem}
-      .hero h1{font-size:clamp(2.4rem,11.5vw,3.1rem);margin-bottom:1rem}
-      .hero-copy>.hero-pricing{max-width:none;padding:.85rem 1rem;margin-top:1rem}.hero-pricing>div+div{padding-left:1rem}
-      .hero-portrait,.hero-mark{display:none}
-      .hero-facts{position:static;padding-bottom:1.35rem;display:grid;grid-template-columns:1fr 1fr;gap:.35rem 1rem}
+      .hero-grid{min-height:auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.8rem 1rem;padding-top:5.5rem;padding-bottom:1.35rem}
+      .hero-copy{display:contents}
+      .hero-copy>*{grid-column:1/-1}
+      .hero-copy .eyebrow{grid-row:1;margin:0}
+      .hero h1{grid-column:1;grid-row:2;align-self:center;font-size:clamp(1.8rem,7.8vw,3.5rem);line-height:1.08;margin:0}
+      .hero .sub{grid-row:3;font-size:.9rem;line-height:1.5}
+      .hero-copy>.hero-pricing{grid-row:4;max-width:none;padding:.75rem 1rem;margin:0}.hero-pricing>div+div{padding-left:1rem}
+      .hero-actions{grid-row:5;margin:0}.hero-actions .btn{width:100%}
+      .hero .micro{grid-row:6;margin:0;font-size:.68rem}
+      .hero-portrait{display:block;grid-column:2;grid-row:2;left:auto;bottom:auto;width:100%;height:clamp(165px,min(47vw,42svh),300px);align-self:stretch;clip-path:polygon(12% 0,100% 0,100% 100%,0 100%,0 10%)}
+      .hero-portrait img{height:175%;top:-6%;object-position:50% 18%}
+      .hero-portrait:after{background:linear-gradient(0deg,rgba(13,18,23,.18),transparent 35%)}
+      .hero-mark{display:none}
+      .hero-facts{grid-column:1/-1;grid-row:7;position:static;margin-top:.35rem;padding-bottom:0;display:grid;grid-template-columns:1fr 1fr;gap:.35rem 1rem}
     }
     @media(max-width:340px){.identity{font-size:1rem}.header .btn{padding:.65rem .72rem}.hero-copy{padding-bottom:2.25rem}.person .btn{letter-spacing:.08em}.hero-facts{font-size:.48rem}}
     @media(max-width:700px){body{padding-bottom:0}footer{padding-bottom:calc(3rem + env(safe-area-inset-bottom))}}
